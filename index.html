@@ -450,23 +450,6 @@ function selectColor(colorId, element) {
   selectedColor = colorId;
 }
 
-// تحديث دالة doBook لتشمل اللون المختار:
-function doBook() {
-  // ... الكود القديم ...
-  
-  let bookDetails = `
-    👤 ${inpName.value}
-    ✂️ ${getServiceName()}
-    ${selectedColor ? `🎨 ${getColorName()}` : ''}
-    💈 ${getBarberName()}
-    📅 ${document.getElementById('date-lbl').textContent}
-    🕐 ${document.querySelector('.slot.sel').textContent}
-    💰 ${getPrice()}
-  `;
-  
-  // ... باقي الكود ...
-}
-
 function getColorName() {
   const color = HAIR_COLORS.find(c => c.id === selectedColor);
   return color ? color.name : '';
